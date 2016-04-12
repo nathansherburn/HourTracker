@@ -1,0 +1,129 @@
+::-webkit-scrollbar {
+  width: 0px;
+}
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  color: #fff;
+  -webkit-app-region: drag;
+  -webkit-user-select: none;
+  border-radius: 10px;
+  background-color: #292823;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 10px 10px;
+}
+h1 {
+  font-size: 3em;
+  font-weight: 300;
+  margin: 10px 0px;
+}
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.btn {
+  -webkit-app-region: no-drag;
+  display: flex;
+  flex-grow: 1;
+  padding: 10px;
+  background-color: #444;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.btn:first-child {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.btn:last-child {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.btn:hover {
+  background-color: #777;
+}
+.start-btn {
+  background-color: #4CAF50;  
+}
+.start-btn:hover {
+  background-color: #388E3C;
+}
+.reset-btn {
+  background-color: #E91E63;  
+}
+.reset-btn:hover {
+  background-color: #C2185B;
+}
+.add-btn {
+  background-color: #2196F3;
+}
+.add-btn:hover {
+  background-color: #1976D2;
+}
+.log {
+  background-color: #191813;
+  border-radius: 4px;
+  height: 400px;
+  font-size: 1.2em;
+  overflow-y: scroll; 
+}
+.time {
+}
+.hours-input {
+  display: block;
+  background-color: #191813;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.4em;
+  border: none;
+  width: 4em;
+  outline: none;
+}
+.date-input {
+  display: block;
+  background-color: #191813;
+  color: #aaa;
+  font-weight: bold;
+  font-size: 0.8em;
+  border: none;
+  width: 100%;
+  outline: none;
+}
+.entry {
+  -webkit-app-region: no-drag;
+  position: relative;
+  border-bottom: 1px solid #222;
+  padding: 10px;
+}
+.btn-delete {
+  color: #292823;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+}
+.btn-delete:hover {
+  color: #333;
+}
+.btn-close {
+  -webkit-app-region: no-drag;
+  position: fixed;
+  top: 8px;
+  right: 9px;
+  cursor: pointer;
+  color: #aaa;
+  font-size: 0.9em;
+}
+.btn-close:hover {
+  color: #fff;
+}

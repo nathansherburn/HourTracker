@@ -1,0 +1,33 @@
+{
+  "name": "hourtracker",
+  "version": "1.0.0",
+  "description": "A minimalist hour tracker",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nathansherburn/hourtracker"
+  },
+  "keywords": [
+    "hour",
+    "tracker",
+    "timer",
+    "timekeeping"
+  ],
+  "author": "Nathan Sherburn",
+  "license": "GPLv3",
+  "bugs": {
+    "url": "https://github.com/nathansherburn/hourtracker/issues"
+  },
+  "homepage": "https://github.com/nathansherburn/hourtracker/#readme",
+  "devDependencies": {
+    "electron-packager": "^6.0.0",
+    "electron-prebuilt": "^0.36.0"
+  },
+  "dependencies": {
+    "angular": "^1.5.3",
+    "nedb": "^1.8.0"
+  }
+}

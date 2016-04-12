@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hour Tracker</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body ng-app="hourtracker" ng-controller="MainController">
+    <i class="material-icons btn-close" ng-click="close()">close</i>
+
+    <div class="log">
+      <div class="entry" ng-repeat="e in log | filter:{deleted: false} | orderBy:'-date':true">
+        <input class="hours-input" ng-model="e.hours" ng-change="updateValues(e)"></input>
+        <input class="date-input" ng-model="e.dateString" ng-change="updateValues(e)"></input>
+        <i class="material-icons btn-delete" ng-click="delete(e)">delete</i>
+      </div>
+      <div id="bottom"></div>
+    </div>
+
+    <h1 class="time">{{displayTime}}</h1>
+    
+    <div class="buttons">
+      <div class="btn start-btn" ng-click="playPause()">
+        <i ng-hide="playing"class="material-icons">play_arrow</i>
+        <i ng-hide="!playing" class="material-icons">pause</i>
+      </div>
+      <div class="btn reset-btn" ng-click="reset()">
+        <i class="material-icons">refresh</i>
+      </div>
+      <div class="btn add-btn" ng-click="addToList()">
+        <i class="material-icons">add</i>
+      </div>
+    </div>
+
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.12.0/moment.js"></script>
+    <script type="text/javascript" src="tracker.js"></script>
+  </body>
+</html>
